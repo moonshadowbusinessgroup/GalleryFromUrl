@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hadimusthafa.galleryfromurl2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GalleryFromUrl2">
+        <activity
+            android:name=".Activity.VideoViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!--// android:configChanges="keyboardHidden|orientation|screenSize" prevent video be started
+             when config changes.-->
+        </activity>
+        <activity
+            android:name=".Activity.ImageViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Activity.PdfViewActivity" />
+        <activity
+            android:name=".Activity.ImageInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Activity.AudioViewActivity" />
+        <activity android:name=".TabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
